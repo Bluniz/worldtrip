@@ -7,7 +7,12 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 export function Carousel() {
   return (
-    <Flex maxWidth={1240} height={450} mb="20" mx="auto">
+    <Flex
+      maxWidth={["100%", "90%"]}
+      height={[200, 450]}
+      mb={["10", "20"]}
+      mx="auto"
+    >
       <Swiper
         spaceBetween={0}
         slidesPerView={1}

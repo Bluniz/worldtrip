@@ -1,7 +1,11 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, SimpleGrid, useBreakpointValue } from "@chakra-ui/react";
 import { TravelItem } from "./TravelItem";
 
 export function TravelTypes() {
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    md: true,
+  });
   return (
     <Flex
       w="100%"
@@ -21,11 +25,46 @@ export function TravelTypes() {
         width: "90px",
       }}
     >
-      <TravelItem src="/images/icons/cocktail.svg" title="vida noturna" />
-      <TravelItem src="/images/icons/surf.svg" title="praia" />
-      <TravelItem src="/images/icons/building.svg" title="moderno" />
-      <TravelItem src="/images/icons/museum.svg" title="clássico" />
-      <TravelItem src="/images/icons/earth.svg" title="e mais..." />
+      <SimpleGrid columns={[2, 5]} spacing={["50px", "200px"]}>
+        <TravelItem
+          src={
+            isWideVersion
+              ? "/images/icons/cocktail.svg"
+              : "images/icons/elipse.svg"
+          }
+          title="vida noturna"
+        />
+        <TravelItem
+          src={
+            isWideVersion ? "/images/icons/surf.svg" : "images/icons/elipse.svg"
+          }
+          title="praia"
+        />
+        <TravelItem
+          src={
+            isWideVersion
+              ? "/images/icons/building.svg"
+              : "images/icons/elipse.svg"
+          }
+          title="moderno"
+        />
+        <TravelItem
+          src={
+            isWideVersion
+              ? "/images/icons/museum.svg"
+              : "images/icons/elipse.svg"
+          }
+          title="clássico"
+        />
+        <TravelItem
+          src={
+            isWideVersion
+              ? "/images/icons/earth.svg"
+              : "images/icons/elipse.svg"
+          }
+          title="e mais..."
+        />
+      </SimpleGrid>
     </Flex>
   );
 }
