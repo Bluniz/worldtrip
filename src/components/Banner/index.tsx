@@ -10,6 +10,7 @@ export function Banner() {
         bgRepeat="no-repeat"
         h="280"
         maxH="280"
+        w="100%"
       >
         <VStack align="flex-start">
           <Heading color="gray.100" mb={4} size="lg" fontWeight="Medium">
