@@ -6,7 +6,7 @@ export function Header() {
       as="header"
       align="center"
       justify="center"
-      h={["300px", "100px"]}
+      h="100px"
       p={[5, 10]}
       w="100%"
     >

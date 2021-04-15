@@ -26,14 +26,18 @@ export function Banner() {
         maxH="280"
       >
         <VStack align="flex-start" margin={!isWideVersion && "10px"}>
-          <Heading color="gray.100" mb={4} size="lg" fontWeight="Medium">
-            5 Continentes,
-            <br /> infinitas possibilidades.
+          <Heading
+            color="gray.100"
+            mb={4}
+            size="lg"
+            fontWeight="Medium"
+            maxW="238px"
+          >
+            5 Continentes, infinitas possibilidades.
           </Heading>
 
-          <Text color="gray.100" fontWeight="normal" fontSize="xl">
-            Chegou a hora de tirar do papel a viagem que você <br />
-            sempre sonhou.
+          <Text color="gray.100" fontWeight="normal" fontSize="xl" maxW="333px">
+            Chegou a hora de tirar do papel a viagem que você sempre sonhou.
           </Text>
         </VStack>
         {isWideVersion && (
