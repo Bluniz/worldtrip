@@ -1,7 +1,8 @@
 import { Flex, Image, Box, Text, Heading } from "@chakra-ui/react";
-import { useEffect } from "react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Link from "next/link";
+import { SwiperSlideContent } from "./SwiperSlideContent";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -23,44 +24,18 @@ export function Carousel() {
         onSlideChange={() => console.log("slide change")}
       >
         <SwiperSlide>
-          <Box position="relative">
-            <Image src="/images/europe.jpg" />
-            <Flex
-              maxH={450}
-              position="absolute"
-              top="0"
-              bottom="0"
-              left="0"
-              right="0"
-              direction="column"
-              align="center"
-              justify="center"
-              bg="rgba(0,0,0,0.5)"
-            >
-              <Heading color="gray.100">Europa</Heading>
-              <Text color="gray.100">O continente mais antigo.</Text>
-            </Flex>
-          </Box>
+          <SwiperSlideContent
+            image="/images/europe.jpg"
+            title="Europa"
+            description="O continente mais antigo."
+          />
         </SwiperSlide>
         <SwiperSlide>
-          <Box position="relative">
-            <Image src="/images/south_america.jpg" />
-            <Flex
-              maxH={450}
-              position="absolute"
-              top="0"
-              bottom="0"
-              left="0"
-              right="0"
-              direction="column"
-              align="center"
-              justify="center"
-              bg="rgba(0,0,0,0.5)"
-            >
-              <Heading color="gray.100">América do Sul</Heading>
-              <Text color="gray.100">Algum continente</Text>
-            </Flex>
-          </Box>
+          <SwiperSlideContent
+            image="/images/south_america.jpg"
+            title="América do Sul"
+            description="Algum continente"
+          />
         </SwiperSlide>
       </Swiper>
     </Flex>
