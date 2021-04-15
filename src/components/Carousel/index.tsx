@@ -1,7 +1,6 @@
-import { Flex, Image, Box, Text, Heading } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Link from "next/link";
 import { SwiperSlideContent } from "./SwiperSlideContent";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
@@ -28,6 +27,7 @@ export function Carousel() {
             image="/images/europe.jpg"
             title="Europa"
             description="O continente mais antigo."
+            url="/continents/europe"
           />
         </SwiperSlide>
         <SwiperSlide>
