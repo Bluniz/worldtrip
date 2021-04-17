@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Icon, IconButton } from "@chakra-ui/react";
+import { Box, Flex, Image, IconButton } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { BsChevronLeft } from "react-icons/bs";
 import Link from "next/link";
