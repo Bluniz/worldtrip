@@ -25,7 +25,7 @@ export function TravelTypes() {
         width: "90px",
       }}
     >
-      <SimpleGrid columns={[2, 5]} spacing={["50px", "200px"]}>
+      <SimpleGrid columns={[2, 5]} spacing={["50px", "130px"]}>
         <TravelItem
           src={
             isWideVersion
